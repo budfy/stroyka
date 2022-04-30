@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.--just-space {
+  justify-content: space-between;
+}
+
+.--just-center {
+  justify-content: center;
+}
+
+.--just-end {
+  justify-content: flex-end;
+}
+
+.--juust-around {
+  justify-content: space-around;
+}
+
+.--align-str {
+  align-items: stretch;
+}
+
+.--align-center {
+  align-items: center;
+}
+
+.--align-end {
+  align-items: flex-end;
+}
+
+.--dir-col {
+  flex-direction: column;
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  font-size: 1rem;
+  background-color: #002082;
+  font-family: 'Montserrat Alternates',
+    sans-serif;
+  color: #CED8F7;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration-style: none;
+  color: #CED8F7;
+  transition: 0.24s;
+
+  &:hover {
+    color: #4A6DE5;
+  }
+
+  &:focus {
+    outline: transparent;
+  }
+
+  &:focus-visible {
+    text-decoration: underline;
+  }
+
+  &:active {}
+
+  &:visited {
+    text-decoration-style: dotted;
+  }
+}
+
+picture>img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}

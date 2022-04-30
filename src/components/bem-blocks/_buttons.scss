@@ -1,0 +1,122 @@
+.buttons {
+  background-color: #ddc612;
+  color: #ffffff;
+  padding: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
+  transition: all 0.25s;
+
+  &__title {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 700;
+    font-style: normal;
+    padding: 1rem 0.5rem;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 0.5rem 0 0 rgba(0, 0, 0, 0.25);
+    transition: all 0.25s;
+    margin-bottom: 0.5rem;
+  }
+
+  &:hover &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__title-text {}
+
+  &__title-logo {
+    margin-left: 0.5em;
+  }
+
+  &__content {
+    max-width: 40rem;
+    margin: 0 auto;
+    transition: all 0.25s;
+  }
+
+  &:hover &__content {
+    padding: 0 1rem 0.5rem;
+  }
+
+  &__screen {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.25rem;
+    overflow: hidden;
+    transition: all 0.25s;
+
+    &[data-screen="1"] {}
+
+    &[data-screen="2"] {}
+
+    &[data-screen="3"] {}
+
+    &.--invisible {
+      height: 0;
+      padding: 0;
+    }
+  }
+
+  &__item {
+    background-color: #fff;
+    padding: 0.25rem;
+
+    &.--w-full {
+      grid-column: span 2;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+    height: 100%;
+    background-color: var(--color__bg, #1b1a2b);
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.75em 1em;
+    width: 100%;
+    transition: 0.24s;
+
+    @media screen and (max-width: 639px) {
+      word-break: break-word;
+      font-size: 0.75rem;
+    }
+
+    &:hover {
+      --color__bg: #1d1c2e;
+      color: #ffffff;
+    }
+
+    &:focus {
+      outline: transparent;
+    }
+
+    &.--red {
+      --color__bg: #fd0500;
+
+      &:hover {
+        --color__bg: #ff2020;
+      }
+    }
+
+    &.--grey {
+      --color__bg: #707070;
+
+      &:hover {
+        --color__bg: #505050;
+      }
+    }
+  }
+}
