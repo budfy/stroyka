@@ -43,7 +43,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 html,
@@ -103,4 +103,34 @@ picture>img {
   width: 100%;
   object-fit: contain;
   object-position: center;
+}
+
+.page-wrap {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page-inner {
+  flex: 1 0 50%;
+  overflow: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.buttons-wrap {
+  flex: 0 0 40%;
+  padding: 2rem;
+  position: relative;
+  height: 100%;
+
+  @media screen and (max-width: 767px) {
+    padding: 0.25rem;
+  }
 }
