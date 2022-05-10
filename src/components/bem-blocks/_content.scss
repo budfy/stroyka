@@ -16,6 +16,16 @@
       grid-template-columns: 1fr;
     }
   }
+
+  &__logo {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 15rem;
+
+    img {
+      filter: drop-shadow(0 0 4px #ffffff);
+    }
+  }
 }
 
 .content-block {

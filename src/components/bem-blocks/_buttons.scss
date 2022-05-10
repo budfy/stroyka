@@ -10,10 +10,13 @@
   width: 26rem;
   max-width: 45vmin;
   cursor: pointer;
-  border-radius: 4rem;
+  border-radius: 3rem;
   margin: 0 auto;
   font-size: 0.75rem;
   max-height: 90vmin;
+  background-image: -webkit-image-set(url(../img/iphone.png) 1x);
+  background-image: url(../img/iphone.webp);
+  background-size: 100% 100%;
 
   @media screen and (max-width: 767px) {
     top: 0;
@@ -23,17 +26,40 @@
     max-height: calc(90vh - 0.5rem);
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-image: -webkit-image-set(url(../img/iphone.png) 1x);
-    background-image: url(../img/iphone.webp);
-    background-size: 100% 100%;
-    pointer-events: none;
+  // &::after {
+  //   content: "";
+  //   height: 100%;
+  //   position: absolute;
+  //   width: 100%;
+  //   top: 0;
+  //   left: 0;
+
+  //   pointer-events: none;
+  // }
+
+
+  &__articles {
+    flex: 1 1 100%;
+    overflow-x: clip;
+    overflow-y: scroll;
+    display: none;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+  }
+
+  &__articles-inner {
+    overflow: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__wrapper {
+    flex: 0 0 auto;
   }
 
   &__title {
