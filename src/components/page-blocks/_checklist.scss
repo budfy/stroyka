@@ -1,7 +1,7 @@
 .checklist {
   padding: 6.75rem 3.5rem 6.75rem 3.5rem;
-  background-image: -webkit-image-set(url(../../img/checkpoints_bg.jpg) 1x);
-  background-image: url(../../img/checkpoints_bg.webp);
+  background-image: -webkit-image-set(url(../img/checkpoints_bg.jpg) 1x);
+  background-image: url(../img/checkpoints_bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -35,7 +35,7 @@
       top: 50%;
       transform: translateY(-50%);
       left: 0;
-      background-image: url(../../img/check.svg);
+      background-image: url(../img/check.svg);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
