@@ -43,6 +43,7 @@
     "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
+    "reseter.css": "^2.0.0",
     "sass": "^1.51.0"
   }
 }

@@ -1,89 +1,41 @@
 .buttons {
-  // background-color: #ddc612;
-  color: #002082;
-  position: sticky;
-  top: 2rem;
-  flex-direction: column;
-  transition: all 0.25s;
-  padding: 2.25rem;
-  height: 52rem;
-  width: 26rem;
-  max-width: 45vmin;
-  cursor: pointer;
-  border-radius: 3rem;
-  margin: 0 auto;
-  font-size: 0.75rem;
-  max-height: 90vmin;
-  background-image: -webkit-image-set(url(../img/iphone.png) 1x);
-  background-image: url(../img/iphone.webp);
-  background-size: 100% 100%;
-
-  @media screen and (max-width: 767px) {
-    top: 0;
-    font-size: 1rem;
-    max-width: calc(100vw - 0.5rem);
-    height: calc(200vw - 1rem);
-    max-height: calc(90vh - 0.5rem);
-  }
-
-  // &::after {
-  //   content: "";
-  //   height: 100%;
-  //   position: absolute;
-  //   width: 100%;
-  //   top: 0;
-  //   left: 0;
-
-  //   pointer-events: none;
-  // }
-
-
-  &__articles {
-    flex: 1 1 100%;
-    overflow-x: clip;
-    overflow-y: scroll;
-    display: none;
-
-    @media screen and (max-width: 767px) {
-      display: block;
-    }
-  }
-
-  &__articles-inner {
-    overflow: auto;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-      width: 0;
-    }
-  }
-
   &__wrapper {
     flex: 0 0 auto;
+    max-width: 100%;
   }
 
   &__title {
-    background-color: transparent;
     border: none;
     flex: 0 0 auto;
     width: 100%;
-    color: #002082;
+    color: var(--color__white);
+    background-color: var(--color__grey-light);
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 400;
+    font-size: 1.25rem;
     font-style: normal;
-    padding: 1em 0.5em;
-    border-radius: 0 0 1em 1em;
-    box-shadow: 0 0.5em 0 0 rgba(0, 0, 0, 0.25);
+    padding: 0.5em 0.5em 0.5em 1em;
+    border-radius: 0.5em;
     transition: all 0.25s;
     margin-bottom: 0.5em;
+  }
 
-    @media screen and (max-width: 767px) {
-      font-size: 0.75em;
-    }
+  &__title-left {
+    padding-right: 1rem;
+    border-right: 1px solid var(--color__white);
+  }
+
+  &__title-right {
+    margin-left: 1rem;
   }
 
   &__title-logo {
     margin-left: 0.5em;
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--color__grey-extralight);
+    border-radius: 50%;
+    padding: 0.25rem;
   }
 
   &__content {
@@ -128,23 +80,25 @@
     text-align: center;
     text-decoration: none;
     font-style: normal;
-    font-weight: 700;
     height: 100%;
-    background-color: var(--color__bg, #1b1a2b);
+    background-color: var(--color__bg);
     color: #ffffff;
     border: none;
+    font-weight: 300;
+    font-size: 2rem;
     border-radius: 0.5em;
-    padding: 0.75em 1em;
+    padding: 0.25em 0.5em;
     width: 100%;
     transition: 0.24s;
     word-break: break-word;
+    --color__bg: var(--color__blue);
 
     @media screen and (max-width: 767px) {
       font-size: 0.5em;
     }
 
     &:hover {
-      --color__bg: #1d1c2e;
+      --color__bg: var(--color__dark);
       color: #ffffff;
     }
 

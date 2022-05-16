@@ -1,0 +1,34 @@
+.chatbot {
+
+  &__inner {
+    width: 100%;
+    height: calc(100% + 110vh);
+    background-color: var(--color__dark);
+    border-radius: 4rem 0 0 0;
+    position: relative;
+    top: -15rem;
+  }
+
+  &__phone {
+    height: 88vh;
+    width: 44vh;
+    max-width: 37.5rem;
+    background-color: #fff;
+    border-radius: 4rem 4rem 3.25rem 3.25rem;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    z-index: 1;
+    background-image: -webkit-image-set(url(../../img/iphone.png) 1x);
+    background-image: url(../../img/iphone.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 3rem 2.25rem 2.5rem;
+  }
+
+  &__phone-inner {
+    height: 100%;
+    width: 100%;
+  }
+}

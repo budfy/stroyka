@@ -1,4 +1,6 @@
-const plugins = [];
+const plugins = [
+  "node_modules/reseter.css/src/scss/reseter.scss"
+];
 
 const {
   src,
