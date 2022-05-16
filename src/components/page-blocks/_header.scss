@@ -1,11 +1,21 @@
 .header {
   min-height: 100vh;
-  background-image: -webkit-image-set(url(img/header_bg.jpg) 1x);
-  background-image: url(img/header_bg.webp);
+  background-image: -webkit-image-set(url(../img/header_bg.jpg) 1x);
+  background-image: url(../img/header_bg.webp);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  @media screen and (max-width: 991px) {
+    background-image: none;
+    min-height: auto;
+    padding: 2rem 0;
+
+    &::before {
+      display: none;
+    }
+  }
 
   .container {
     flex-direction: column;
@@ -17,15 +27,28 @@
     text-align: center;
     font-weight: 400;
     margin-top: 7.25rem;
+
+    @media screen and (max-width: 991px) {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+    }
   }
 
   &__inner {
     margin-right: auto;
     width: 50%;
     max-width: 39rem;
+
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
   }
 
   &__text {
     font-size: 3.25rem;
+
+    @media screen and (max-width: 991px) {
+      font-size: 1.5rem;
+    }
   }
 }

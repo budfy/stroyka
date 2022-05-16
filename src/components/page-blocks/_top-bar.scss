@@ -3,12 +3,17 @@
   padding: 2.5rem 0;
   max-width: 100%;
 
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+
   &__logo {
     flex: 0 0 auto;
   }
 
   &__nav {
     flex: 0 1 40rem;
+    margin: 0 2rem;
   }
 
   &__menu {

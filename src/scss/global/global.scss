@@ -1,5 +1,10 @@
 html {
   font-size: 16px;
+
+  @media screen and (max-width: 1365px),
+  (max-height: 767px) {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -9,6 +14,36 @@ body {
   color: var(--color__white);
   --sections-margin: 7rem;
   max-width: 100vw;
+  min-height: 100vh;
+
+  @media screen and (max-width: 991px) {
+    padding: 2rem;
+    position: relative;
+    background-image: -webkit-image-set(url(../img/header_bg.jpg) 1x);
+    background-image: url(../img/header_bg.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    --section-margin: 3rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 40%);
+      z-index: 0;
+    }
+
+    &>* {
+      position: relative;
+      z-index: 1;
+    }
+  }
 }
 
 picture {
@@ -29,6 +64,10 @@ picture {
   width: 100%;
   height: 100%;
   max-width: 120rem;
+
+  @media screen and (max-width: 991px) {
+    padding: 0;
+  }
 }
 
 .bg-dark {
@@ -54,13 +93,80 @@ picture {
 
 .page-wrapper {
   padding-right: 0;
+
+  @media screen and (max-width: 991px) {
+    flex-direction: column;
+    max-height: 100%;
+    padding: 0;
+    overflow-block: hidden;
+  }
+}
+
+.main {
+  @media screen and (max-width: 991px) {
+    height: 100%;
+  }
 }
 
 .content {
   flex: 1 1 52.5rem;
+
+  @media screen and (max-width: 991px) {
+    flex: 1 1 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: clip;
+  }
 }
 
 .chatbot {
   flex: 1 1 42rem;
   margin-left: 10rem;
+
+  @media screen and (max-width: 1365px) {
+    margin-left: 2rem;
+  }
+
+  @media screen and (max-width: 991px) {
+    flex: 0 0 auto;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.mobile-page {
+  @media screen and (max-width: 991px) {
+    background-image: -webkit-image-set(url(../img/iphone.png) 1x);
+    background-image: url(../img/iphone.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    max-height: calc(100vh - 5rem);
+    margin: 0 auto;
+    overflow: auto;
+    padding: 4rem 2rem 2rem;
+    scrollbar-width: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+}
+
+.header,
+.footer {
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+
+  &.--mobile {
+    display: none;
+
+    @media screen and (max-width: 991px) {
+      display: block;
+    }
+  }
 }

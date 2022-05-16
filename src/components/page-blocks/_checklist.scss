@@ -1,7 +1,7 @@
 .checklist {
   padding: 6.75rem 3.5rem 6.75rem 3.5rem;
-  background-image: -webkit-image-set(url(img/checkpoints_bg.jpg) 1x);
-  background-image: url(img/checkpoints_bg.webp);
+  background-image: -webkit-image-set(url(../img/checkpoints_bg.jpg) 1x);
+  background-image: url(../img/checkpoints_bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -9,23 +9,40 @@
   overflow: hidden;
   margin-top: var(--sections-margin);
 
+  @media screen and (max-width: 991px) {
+    padding: 4.5rem 1rem 4.5rem 2rem;
+  }
+
   &__title {
     max-width: 40rem;
     font-weight: 500;
     font-size: 3rem;
+
+    @media screen and (max-width: 991px) {
+      font-size: 1.5rem;
+      max-width: 15rem;
+    }
   }
 
   &__list {
     padding: 0;
     list-style: none;
     margin-top: 9.5rem;
+
+    @media screen and (max-width: 991px) {
+      margin-top: 4.75rem;
+    }
   }
 
   &__item {
     position: relative;
     font-size: 2.25rem;
     font-weight: 500;
-    padding-left: 4.5rem;
+    padding-left: 2em;
+
+    @media screen and (max-width: 991px) {
+      font-size: 1.5rem;
+    }
 
     &::before {
       content: '';
@@ -35,14 +52,14 @@
       top: 50%;
       transform: translateY(-50%);
       left: 0;
-      background-image: url(img/check.svg);
+      background-image: url(../img/check.svg);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
     }
 
     &+& {
-      margin-top: 1rem;
+      margin-top: 1em;
     }
   }
 
@@ -60,6 +77,11 @@
     font-weight: 500;
     transition: 0.24s;
     margin-top: 11rem;
+
+    @media screen and (max-width: 991px) {
+      font-size: 1.25rem;
+      margin-top: 5rem;
+    }
 
     &:hover {
       color: var(--color__brown-light);

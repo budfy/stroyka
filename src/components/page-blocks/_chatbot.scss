@@ -1,4 +1,8 @@
 .chatbot {
+  @media screen and (max-width: 991px) {
+    background-color: var(--color__white);
+    padding: 0.25rem;
+  }
 
   &__inner {
     width: 100%;
@@ -7,24 +11,45 @@
     border-radius: 4rem 0 0 0;
     position: relative;
     top: -15rem;
+
+    @media screen and (max-height: 767px) {
+      top: -5rem;
+    }
+
+    @media screen and (max-width: 991px) {
+      height: auto;
+      background-color: transparent;
+      position: static;
+      top: auto;
+    }
   }
 
   &__phone {
     height: 88vh;
     width: 44vh;
     max-width: 37.5rem;
-    background-color: #fff;
-    border-radius: 4rem 4rem 3.25rem 3.25rem;
+    background-color: var(--color__white);
+    border-radius: 6vh;
     position: sticky;
     top: 50%;
     transform: translateY(-50%);
     margin: 0 auto;
     z-index: 1;
-    background-image: -webkit-image-set(url(img/iphone.png) 1x);
-    background-image: url(img/iphone.webp);
-    background-size: 100%;
+    background-image: -webkit-image-set(url(../img/iphone.png) 1x);
+    background-image: url(../img/iphone.webp);
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     padding: 3rem 2.25rem 2.5rem;
+
+    @media screen and (max-width: 991px) {
+      height: auto;
+      width: 100%;
+      border-radius: 0;
+      position: static;
+      transform: none;
+      background: none;
+      padding: 0;
+    }
   }
 
   &__phone-inner {

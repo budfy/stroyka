@@ -5,6 +5,15 @@
   grid-row-gap: 3.75rem;
   grid-column-gap: 4.75rem;
   color: var(--color__blue);
+
+  @media screen and (max-width: 1199px) {
+    grid-gap: 2rem;
+  }
+
+  @media screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
 }
 
 .service-item {
@@ -13,12 +22,31 @@
   padding: 2rem 1rem;
   flex-direction: column;
 
-  &__icon {}
+  &__top {
+    @media screen and (max-width: 991px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    @media screen and (max-width: 991px) {
+      flex: 0 0 3rem;
+      height: 3rem;
+      min-width: 3rem;
+      order: 1;
+    }
+  }
 
   &__title {
     margin-top: 0.5rem;
     font-size: 2.25rem;
     font-weight: 500;
+
+    @media screen and (max-width: 991px) {
+      font-size: 2rem;
+    }
   }
 
   &__text {
@@ -39,14 +67,20 @@
     margin-top: auto;
     width: 100%;
 
+    @media screen and (max-width: 991px) {
+      font-size: 1.5rem;
+    }
+
     &::after {
-      position: absolute;
       content: "";
+      position: absolute;
       display: block;
       height: 1.25em;
       width: 1.25em;
-      background-image: url(img/arrow_right.svg);
-      background-size: contain;
+      background-image: url(../img/arrow_right.svg);
+      background-size: 95% 95%;
+      background-repeat: no-repeat;
+      background-position: center center;
       right: 2rem;
       top: 50%;
       transform: translateY(-50%);

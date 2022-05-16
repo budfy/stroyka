@@ -1,21 +1,33 @@
 .callback {
   margin-top: var(--sections-margin);
-  background-image: -webkit-image-set(url(img/form_bg.jpg) 1x);
-  background-image: url(img/form_bg.webp);
+  background-image: -webkit-image-set(url(../img/form_bg.jpg) 1x);
+  background-image: url(../img/form_bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0.75rem;
   padding: 11rem 2rem;
 
+  @media screen and (max-width: 991px) {
+    padding: 2.5rem 2rem;
+  }
+
   &__inner {
     max-width: 35rem;
     margin: 0 auto;
+
+    @media screen and (max-width: 991px) {
+      max-width: 16rem;
+    }
   }
 
   &__title {
     font-weight: 500;
     font-size: 3rem;
+
+    @media screen and (max-width: 991px) {
+      font-size: 1.25rem;
+    }
   }
 
   &__label {
@@ -24,6 +36,11 @@
     position: relative;
     width: 100%;
     max-width: 32.75rem;
+
+    @media screen and (max-width: 991px) {
+      max-width: 12.75rem;
+      margin-top: 1.25rem;
+    }
   }
 
   &__placeholder {
@@ -37,6 +54,11 @@
     font-weight: 300;
     transition: all 0.25s;
     white-space: no-wrap;
+
+    @media screen and (max-width: 991px) {
+      left: 1.5rem;
+      font-size: 1rem;
+    }
   }
 
   &__input {
@@ -50,6 +72,10 @@
     border-radius: 0.75rem;
     border: none;
 
+    @media screen and (max-width: 991px) {
+      font-size: 1rem;
+    }
+
     &:focus {
       outline: transparent;
     }
@@ -62,6 +88,11 @@
     color: var(--color__white);
     font-weight: 500;
     left: 1rem;
+
+    @media screen and (max-width: 991px) {
+      left: 0.75rem;
+      top: -1.25rem;
+    }
   }
 
   &__btn {
@@ -78,6 +109,12 @@
     max-width: 32.75rem;
     cursor: pointer;
     transition: all 0.24s;
+
+    @media screen and (max-width: 991px) {
+      margin-top: 4.5rem;
+      font-size: 1.25rem;
+      max-width: 12.75rem;
+    }
 
     &:hover {
       background-color: var(--color__brown-light);

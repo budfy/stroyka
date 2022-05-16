@@ -1,11 +1,24 @@
 .footer {
   margin-top: var(--sections-margin);
   padding: 6rem 0;
-  background-image: -webkit-image-set(url(img/footer_bg.jpg) 1x);
-  background-image: url(img/footer_bg.webp);
+  background-image: -webkit-image-set(url(../img/footer_bg.jpg) 1x);
+  background-image: url(../img/footer_bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+
+  &.--mobile {
+    display: none;
+
+    @media screen and (max-width: 991px) {
+      display: block;
+      padding: 3.5rem 1rem;
+    }
+  }
 
   &__inner {}
 
@@ -14,6 +27,15 @@
     font-size: 4rem;
     max-width: 46.5rem;
 
+    @media screen and (max-width: 1199px) {
+      max-width: 35rem;
+    }
+
+    @media screen and (max-width: 991px) {
+      font-size: 1.5rem;
+
+    }
+
     &::after {
       content: "";
       display: block;
@@ -21,6 +43,11 @@
       background-color: var(--color__white);
       flex: 0 1 100%;
       margin-left: 2.75rem;
+
+      @media screen and (max-width: 991px) {
+        margin-left: 1.5rem;
+        height: 1rem;
+      }
     }
   }
 
@@ -32,6 +59,10 @@
     width: 100%;
     max-width: 27.5rem;
     margin-left: 5rem;
+
+    @media screen and (max-width: 991px) {
+      margin-left: 0;
+    }
   }
 
   &__link-iconed {
@@ -42,6 +73,11 @@
     font-size: 2.25rem;
     font-weight: 500;
     transition: 0.24s;
+
+    @media screen and (max-width: 991px) {
+      margin-top: 2rem;
+      font-size: 1.25rem;
+    }
 
     &:hover {
       color: var(--color__grey-light);
@@ -62,7 +98,8 @@
   }
 
   &__link-text {
-    flex: 0 0 15rem;
+    flex: 0 1 15rem;
+    margin-left: 1em;
   }
 
   &__link-icon {
@@ -85,6 +122,13 @@
     font-weight: 500;
     transition: 0.24s;
     margin-top: 3.25rem;
+
+    @media screen and (max-width: 991px) {
+      margin-top: 2rem;
+      font-size: 1.25rem;
+      max-width: 12.75rem;
+      border-radius: 0.75rem;
+    }
 
     &:hover {
       color: var(--color__brown-light);
