@@ -1,7 +1,23 @@
 .chatbot {
   @media screen and (max-width: 991px) {
-    background-color: var(--color__white);
-    padding: 0.25rem;
+    display: none;
+  }
+
+  &.--mobile {
+    display: none;
+
+    @media screen and (max-width: 991px) {
+      display: block;
+      min-height: 100vh;
+      margin-left: -1rem;
+      margin-right: -1rem;
+      width: calc(100% + 2rem);
+      background-image: -webkit-image-set(url(../../img/bricks.jpg) 1x);
+      background-image: url(../../img/bricks.webp);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
   }
 
   &__inner {
@@ -17,7 +33,7 @@
     }
 
     @media screen and (max-width: 991px) {
-      height: auto;
+      height: 100vh;
       background-color: transparent;
       position: static;
       top: auto;
@@ -29,17 +45,18 @@
     width: 44vh;
     max-width: 37.5rem;
     background-color: var(--color__white);
+    background-image: -webkit-image-set(url(../../img/bricks.webp) 1x);
+    background-image: url(../../img/bricks.webp);
     border-radius: 6vh;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: sticky;
     top: 50%;
     transform: translateY(-50%);
     margin: 0 auto;
-    z-index: 1;
-    background-image: -webkit-image-set(url(../img/iphone.png) 1x);
-    background-image: url(../img/iphone.webp);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    padding: 3rem 2.25rem 2.5rem;
+    z-index: 100;
+    overflow: hidden;
+    // padding: 3rem 2.25rem 2.5rem;
 
     @media screen and (max-width: 991px) {
       height: auto;
@@ -50,10 +67,114 @@
       background: none;
       padding: 0;
     }
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-image: -webkit-image-set(url(../img/iphone.png) 1x);
+      background-image: url(../img/iphone.webp);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      z-index: 2;
+      pointer-events: none;
+
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+    }
   }
 
   &__phone-inner {
     height: 100%;
     width: 100%;
+    flex-direction: column;
+  }
+
+  &__phone-header {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 2em 1.5em .5em;
+    background-color: var(--color__purple);
+    font-size: 2rem;
+
+    @media screen and (max-height: 799px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__phone-title {
+    display: block;
+    font-weight: 700;
+  }
+
+  &__phone-subtitle {
+    display: block;
+
+  }
+
+  &__phone-content {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  &__phone-menu {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 0 2.5rem 2rem;
+  }
+}
+
+.screens {
+  padding: 2rem 2rem 0.5rem;
+  overflow: auto;
+
+  &__main,
+  &__item {
+    color: #000;
+    transition: all 0.24s;
+    height: 100%;
+  }
+
+  &__main-text {
+    font-size: 1.25rem;
+
+    @media screen and (max-height: 799px) {
+      font-size: 1rem;
+    }
+
+    &+& {
+      margin-top: 1em;
+    }
+  }
+
+  &__slider {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+
+    .swiper-slide {
+      max-height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 30%);
+      grid-gap: 1rem;
+      align-items: center;
+      justify-items: center;
+
+      &__pic {
+        height: 100%;
+
+        & img {
+          max-width: unset;
+          height: 100%;
+          line-height: 0;
+        }
+      }
+    }
   }
 }

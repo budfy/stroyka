@@ -1,5 +1,6 @@
 const plugins = [
-  "node_modules/reseter.css/src/scss/reseter.scss"
+  "node_modules/reseter.css/src/scss/reseter.scss",
+  "node_modules/swiper/swiper-bundle.css"
 ];
 
 const {

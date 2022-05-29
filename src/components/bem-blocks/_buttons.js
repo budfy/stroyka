@@ -1,44 +1,83 @@
-function switchPannels() {
-  const buttonPannel = document.querySelector('.buttons');
-  const pannels = buttonPannel.querySelectorAll('.buttons__screen');
-  const buttons = document.querySelectorAll('.buttons__btn[data-switchto]');
-  const links = document.querySelectorAll('a.buttons__btn');
+const rem = parseInt(window.getComputedStyle(document.body).getPropertyValue('font-size'));
+const scenesSlider = new Swiper(".screens__slider.swiper", {
+  slidesPerView: 1,
+  spaceBetween: rem,
+});
 
-  // buttonPannel.addEventListener('mouseenter', showMainPannel, false);
-  // buttonPannel.addEventListener('mouseleave', hideMainPannel, false);
-  buttons.forEach(el => el.addEventListener('click', showSomePannel));
-  links.forEach(el => el.addEventListener('click', hideMainPannel));
 
-  function showMainPannel() {
-    let pannel1 = document.querySelector('.buttons__screen[data-screen="1"]');
-    pannel1.style.height = pannel1.scrollHeight + "px";
+function menu() {
+  const menuBtn = document.querySelectorAll('.js-chatbot-menu-btn');
+  const goBackBtn = document.querySelectorAll('.js-goback-btn');
+
+  function showMenu(e) {
+    const parent = e.currentTarget.closest('.chatbot')
+    const chatbotMenu = parent.querySelector('.js-chatbot-menu');
+    const mainScene = parent.querySelector('.screens__main');
+    const sliderScene = parent.querySelector('.screens__slider');
+    const thisBtn = parent.querySelector('.js-chatbot-menu-btn');
+
+    let height = chatbotMenu.scrollHeight;
+
+    chatbotMenu.style.overflow = "visible";
+    chatbotMenu.style.height = height + "px";
+
+    mainScene.style.overflow = 'hidden';
+    mainScene.style.transition = "all 0.24s";
+    mainScene.style.height = 0;
+
+    thisBtn.classList.add('--is-hidden');
+
     setTimeout(() => {
-      pannel1.classList.remove('--invisible');
-      pannel1.removeAttribute('style');
-    }, 250);
-  };
+      let h = sliderScene.parentNode.offsetHeight;
+      sliderScene.style.height = h + "px";
+    }, 120);
 
-  function hideMainPannel() {
-    pannels.forEach(el => {
-      el.style.height = 0;
-      setTimeout(() => {
-        el.classList.add("--invisible");
-        el.removeAttribute('style');
-      }, 250);
-    })
-  };
-
-  function showSomePannel(e) {
-    let targetPannel = document.querySelector(`.buttons__screen[data-screen="${ e.target.dataset.switchto}"]`);
-    hideMainPannel();
     setTimeout(() => {
-      targetPannel.style.height = targetPannel.scrollHeight + "px";
-      setTimeout(() => {
-        targetPannel.classList.remove('--invisible');
-        targetPannel.removeAttribute('style');
-      }, 250);
+      chatbotMenu.style.transform = "translateY(0)"
+      chatbotMenu.classList.add("--is-visible");
+      thisBtn.style.height = 0;
+      thisBtn.style.padding = 0;
+      scenesSlider.update();
     }, 250);
-  };
+  }
+
+  function hideMenu(e) {
+    const parent = e.currentTarget.closest('.chatbot')
+    const chatbotMenu = parent.querySelector('.js-chatbot-menu');
+    const mainScene = parent.querySelector('.screens__main');
+    const sliderScene = parent.querySelector('.screens__slider');
+    const thisBtn = parent.querySelector('.js-chatbot-menu-btn');
+
+    let h = mainScene.scrollHeight + "px";
+
+    chatbotMenu.style.transform = "translateY(250%)"
+    chatbotMenu.classList.remove("--is-visible");
+    chatbotMenu.style.overflow = "hidden";
+    chatbotMenu.style.height = 0;
+
+    mainScene.style.overflow = 'auto';
+    mainScene.style.transition = "all 0.24s";
+
+    thisBtn.removeAttribute("style");
+
+    setTimeout(() => {
+      sliderScene.style.height = 0;
+    }, 120);
+
+    setTimeout((e) => {
+      mainScene.style.height = h;
+      mainScene.removeAttribute("style");
+      thisBtn.classList.remove('--is-hidden');
+      scenesSlider.update();
+    }, 250);
+  }
+
+  menuBtn.forEach(el => {
+    el.addEventListener("click", showMenu)
+  });
+  goBackBtn.forEach(el => {
+    el.addEventListener("click", hideMenu)
+  });
 }
 
-switchPannels();
+menu();

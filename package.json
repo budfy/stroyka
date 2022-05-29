@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "reseter.css": "^2.0.0",
-    "sass": "^1.51.0"
+    "sass": "^1.51.0",
+    "swiper": "^8.1.6"
   }
 }

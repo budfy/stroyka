@@ -116,6 +116,11 @@ picture {
     width: 100%;
     overflow-y: auto;
     overflow-x: clip;
+    padding: 0 1rem;
+  }
+
+  @media screen and (max-width: 399px) {
+    padding: 0 0.5rem;
   }
 }
 
@@ -136,22 +141,34 @@ picture {
 
 .mobile-page {
   @media screen and (max-width: 991px) {
-    background-image: -webkit-image-set(url(../img/iphone.png) 1x);
-    background-image: url(../img/iphone.webp);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     max-height: calc(100vh - 5rem);
     width: 95vw;
     margin: 0 auto;
     overflow: auto;
-    padding: 5rem 2.5rem 2.5rem;
+    padding: 1rem 1.5rem 1rem;
     scrollbar-width: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    max-width: 33rem;
 
-    &::-webkit-scrollbar {
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      background-image: -webkit-image-set(url(../img/iphone.png) 1x);
+      background-image: url(../img/iphone.webp);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
+
+    &>*::-webkit-scrollbar {
       width: 0;
     }
   }
