@@ -117,6 +117,7 @@ picture {
     overflow-y: auto;
     overflow-x: clip;
     padding: 0 1rem;
+    background-color: var(--color__grey-extralight);
   }
 
   @media screen and (max-width: 399px) {

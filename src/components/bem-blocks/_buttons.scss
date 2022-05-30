@@ -55,6 +55,10 @@
     background-color: var(--color__grey-extralight);
     border-radius: 50%;
     padding: 0.125em;
+
+    @media screen and (max-width: 991px) {
+      font-size: 1rem;
+    }
   }
 
   &__menu {
