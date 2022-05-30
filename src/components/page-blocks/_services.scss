@@ -4,7 +4,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 3.75rem;
   grid-column-gap: 4.75rem;
-  color: var(--color__blue);
+  color: var(--color__white);
 
   @media screen and (max-width: 1199px) {
     grid-gap: 2rem;
@@ -18,7 +18,7 @@
 
 .service-item {
   border-radius: 0.75rem;
-  background-color: var(--color__grey-extralight);
+  background-color: var(--color__blue);
   padding: 2rem 1rem;
   flex-direction: column;
 
@@ -61,7 +61,7 @@
   &__link {
     display: block;
     text-decoration: none;
-    color: var(--color__blue);
+    color: var(--color__white);
     font-size: 1.5rem;
     font-weight: 600;
     position: relative;
@@ -102,11 +102,11 @@
 
     &:focus-visible {
       outline: transparent;
-      color: var(--color__brown);
+      color: var(--color__white);
     }
 
     &:active {
-      color: var(--color__brown-light);
+      color: var(--color__white);
     }
   }
 }

@@ -49,69 +49,8 @@
       <div class="container page-wrapper flex --align-stretch --just-between">
         <div class="content">
 
-          <div class="chatbot --mobile">
-            <div class="chatbot__inner">
-              <div class="chatbot__phone buttons">
-                <div class="chatbot__phone-inner flex --align-end">
-                  <div class="chatbot__phone-header">
-                    <span class="chatbot__phone-title">Проф Буд</span>
-                    <span class="chatbot__phone-subtitle">Будівельні послуги в Вінниці</span>
-                  </div>
-                  <div class="chatbot__phone-content screens">
-                    <div class="screens__main">
-                      <p class="screens__main-text"><strong>Проф буд ком</strong> - перший агрегатор будівельних товарів та послуг в Україні створений для максимально економного та мобільного рішення усіх каталогів з будівництва.
-                      </p>
-                      <p class="screens__main-text">З нашим передовим сервісом від компанії “Проф Буд” ви отримаєте ланцюговий пакет заощаджень від формування кошторисів до завершення робіт враховуючи повну підтримку та компентність наших проф-менеджерів готових допомоги в любий час доби починаючи від капітального будівництва промислових споруд до житлового ремонту та виклику майстра.</p>
-                      <p class="screens__main-text">Зберігаючи свій час та гроші довірте свій вибір професіоналам які завжди в вашому телефоні та готові допомогти в будь який час.</p>
-                      <p class="screens__main-text"><strong>Дякуємо що з нами!</strong></p>
-                    </div>
+          @@include('components/page-blocks/_chatbot.html',{"subclass":"--mobile"})
 
-
-                    @@include('./components/page-blocks/_scene-item-slider.html')
-
-                  </div>
-                  <div class="chatbot__phone-menu buttons">
-                    <button class="buttons__main js-chatbot-menu-btn"
-                            type="button"
-                            data-screen="products">
-                      <span class="buttons__main-text">
-                        Меню
-                      </span>
-                      <picture class="buttons__main-logo">
-                        <img src="img/icon.svg"
-                             alt="">
-                      </picture>
-                    </button>
-
-                    <div class="buttons__menu --is-visible js-chatbot-menu">
-                      <div class="buttons__menu-title flex --align-center --just-center">
-                        <span class="buttons__menu-title-text --left">Проф Буд</span>
-                        <span class="buttons__menu-title-text">Партнерські програми</span>
-                        <picture class="buttons__menu-title-logo">
-                          <img src="img/icon.svg"
-                               alt=""
-                               class="buttons__menu-title-img">
-                        </picture>
-                      </div>
-                      <div class="buttons__menu-wrapper flex --align-stretch">
-                        <button class="buttons__item --back-icon js-goback-btn">Назад</button>
-                        <a href="#"
-                           rel="nofollow noreferrer"
-                           target="_blank"
-                           class="buttons__item"
-                           type="button">Товари</a>
-                        <a href="#"
-                           rel="nofollow noreferrer"
-                           target="_blank"
-                           class="buttons__item"
-                           type="button">Послуги</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           @@include('components/page-blocks/_header.html',{"subclass":"--mobile"})
           <div class="services">
             <article class="service-item flex">
@@ -239,67 +178,8 @@
           </form>
           @@include('components/page-blocks/_footer.html',{"subclass":"--mobile"})
         </div>
+        @@include('components/page-blocks/_chatbot.html',{"subclass":""})
 
-        <div class="chatbot">
-          <div class="chatbot__inner">
-            <div class="chatbot__phone buttons">
-              <div class="chatbot__phone-inner flex --align-end">
-                <div class="chatbot__phone-header">
-                  <span class="chatbot__phone-title">Проф Буд</span>
-                  <span class="chatbot__phone-subtitle">Будівельні послуги в Вінниці</span>
-                </div>
-                <div class="chatbot__phone-content screens">
-                  <div class="screens__main">
-                    <p class="screens__main-text"><strong>Проф буд ком</strong> - перший агрегатор будівельних товарів та послуг в Україні створений для максимально економного та мобільного рішення усіх каталогів з будівництва.
-                    </p>
-                    <p class="screens__main-text">З нашим передовим сервісом від компанії “Проф Буд” ви отримаєте ланцюговий пакет заощаджень від формування кошторисів до завершення робіт враховуючи повну підтримку та компентність наших проф-менеджерів готових допомоги в любий час доби починаючи від капітального будівництва промислових споруд до житлового ремонту та виклику майстра.</p>
-                    <p class="screens__main-text">Зберігаючи свій час та гроші довірте свій вибір професіоналам які завжди в вашому телефоні та готові допомогти в будь який час.</p>
-                    <p class="screens__main-text"><strong>Дякуємо що з нами!</strong></p>
-                  </div>
-                  @@include('./components/page-blocks/_scene-item-slider.html')
-                </div>
-                <div class="chatbot__phone-menu buttons">
-                  <button class="buttons__main js-chatbot-menu-btn"
-                          type="button"
-                          data-screen="products">
-                    <span class="buttons__main-text">
-                      Меню
-                    </span>
-                    <picture class="buttons__main-logo">
-                      <img src="img/icon.svg"
-                           alt="">
-                    </picture>
-                  </button>
-
-                  <div class="buttons__menu --is-visible js-chatbot-menu">
-                    <div class="buttons__menu-title flex --align-center --just-center">
-                      <span class="buttons__menu-title-text --left">Проф Буд</span>
-                      <span class="buttons__menu-title-text">Партнерські програми</span>
-                      <picture class="buttons__menu-title-logo">
-                        <img src="img/icon.svg"
-                             alt=""
-                             class="buttons__menu-title-img">
-                      </picture>
-                    </div>
-                    <div class="buttons__menu-wrapper flex --align-stretch">
-                      <button class="buttons__item --back-icon js-goback-btn">Назад</button>
-                      <a href="#"
-                         rel="nofollow noreferrer"
-                         target="_blank"
-                         class="buttons__item"
-                         type="button">Товари</a>
-                      <a href="#"
-                         rel="nofollow noreferrer"
-                         target="_blank"
-                         class="buttons__item"
-                         type="button">Послуги</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
   </div>
   </main>
