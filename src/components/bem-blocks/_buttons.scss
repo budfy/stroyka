@@ -60,6 +60,11 @@
     @media screen and (max-width: 991px) {
       font-size: 1.5rem;
     }
+
+    & img {
+      display: block;
+      max-height: 1em;
+    }
   }
 
   &__menu {
