@@ -16,6 +16,7 @@
     margin-bottom: 0.25em;
     display: grid;
     grid-template-columns: auto 4rem;
+    align-items: center;
 
     @media screen and (max-height: 799px) {
       font-size: 1.75rem;
@@ -57,7 +58,7 @@
     padding: 0.125em;
 
     @media screen and (max-width: 991px) {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
   }
 
