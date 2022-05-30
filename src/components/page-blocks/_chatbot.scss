@@ -13,10 +13,9 @@
       margin-right: -1rem;
       width: calc(100% + 2rem);
       background-image: -webkit-image-set(url(../img/bricks.jpg) 1x);
-      background-image: url(../img/bricks.webp);
+      background-image: url(../img/bricks.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      background-attachment: fixed;
     }
   }
 
@@ -89,7 +88,7 @@
   }
 
   &__phone-inner {
-    height: 100%;
+    height: calc(100vh - 7rem);
     width: 100%;
     flex-direction: column;
   }

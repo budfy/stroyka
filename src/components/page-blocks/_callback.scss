@@ -40,6 +40,8 @@
     @media screen and (max-width: 991px) {
       max-width: 12.75rem;
       margin-top: 1.25rem;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -109,11 +111,14 @@
     max-width: 32.75rem;
     cursor: pointer;
     transition: all 0.24s;
+    display: block;
 
     @media screen and (max-width: 991px) {
       margin-top: 4.5rem;
       font-size: 1.25rem;
       max-width: 12.75rem;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &:hover {
