@@ -41,7 +41,7 @@ function menu() {
     thisBtn.classList.add('--is-hidden');
 
     setTimeout(() => {
-      let h = sliderScene.parentNode.offsetHeight;
+      let h = sliderScene.parentNode.offsetHeight - (10 * rem);
       sliderScene.style.height = h + "px";
     }, 120);
 

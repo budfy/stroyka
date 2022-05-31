@@ -25,7 +25,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    --section-margin: 3rem;
+    --section-margin: 2rem;
 
     &::before {
       content: "";
@@ -166,7 +166,7 @@ picture {
       background-image: url(../img/iphone.webp);
       background-size: 100% 100%;
       background-repeat: no-repeat;
-      z-index: 2;
+      z-index: 3;
     }
 
     &>*::-webkit-scrollbar {
