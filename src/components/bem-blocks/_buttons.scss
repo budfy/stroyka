@@ -175,7 +175,7 @@
     }
 
     &.--dropdown-link {
-      font-size: 0.75rem;
+      font-size: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -184,11 +184,12 @@
       min-height: 3.5em;
 
       @media screen and (max-width: 767px) {
-        font-size: 0.5rem;
+        // font-size: 0.5rem;
       }
     }
 
-    &[data-current="true"] {
+    &[data-current="true"],
+    &.--red {
       background-color: var(--color__red);
 
       &::before {

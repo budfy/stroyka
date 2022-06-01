@@ -134,7 +134,7 @@
       margin: 0 auto;
       z-index: 2;
       background-color: var(--color__grey-extralight);
-      border-radius: 0 0 3rem 3rem;
+      border-radius: 0 0 4.5rem 4.5rem;
     }
   }
 }
@@ -176,6 +176,7 @@
       grid-gap: 1rem;
       align-items: center;
       justify-items: center;
+      grid-auto-flow: column;
 
       &__pic {
         height: 100%;

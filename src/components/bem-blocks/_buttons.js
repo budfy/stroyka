@@ -1,16 +1,12 @@
 const rem = parseInt(window.getComputedStyle(document.body).getPropertyValue('font-size'));
 
 document.addEventListener('DOMContentLoaded', function () {
-  // height 100vh fix for IOS
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-  // resize
-  window.addEventListener('resize', () => {
-    let vh = window.innerHeight * 0.01;
-
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  });
+  if (window.matchMedia('(max-width: 991px)').matches) {
+    // height 100vh fix for IOS
+    document.body.style.height = window.innerHeight + "px";
+  } else {
+    document.body.removeAttribute("style");
+  }
 })
 
 const scenesSlider = new Swiper(".screens__slider.swiper", {
@@ -19,6 +15,14 @@ const scenesSlider = new Swiper(".screens__slider.swiper", {
   autoplay: {
     delay: 3000,
     speed: 1500,
+    enabled: false
+  },
+  breakpoints: {
+    991: {
+      autoplay: {
+        enabled: true
+      }
+    }
   }
 });
 
