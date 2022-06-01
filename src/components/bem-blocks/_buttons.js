@@ -1,5 +1,18 @@
 const rem = parseInt(window.getComputedStyle(document.body).getPropertyValue('font-size'));
 
+document.addEventListener('DOMContentLoaded', function () {
+  // height 100vh fix for IOS
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  // resize
+  window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
+})
+
 const scenesSlider = new Swiper(".screens__slider.swiper", {
   slidesPerView: 1,
   spaceBetween: rem,
