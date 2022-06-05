@@ -13,5 +13,5 @@ module.exports = function build_js() {
 			presets: ['@babel/env']
 		}))
 		.pipe(concat('main.min.js'))
-		.pipe(dest('build/js/'))
+		.pipe(dest('docs/js/'))
 }
