@@ -98,11 +98,20 @@
     width: 100%;
     padding: 2em 1.5em .5em;
     background-color: var(--color__purple);
-    font-size: 2rem;
+    font-size: 1.75rem;
 
     @media screen and (max-height: 799px) {
       font-size: 1.5rem;
     }
+  }
+
+  &__phone-header-left {
+    flex-direction: column;
+  }
+
+  &__phone-link {
+    text-decoration: none;
+    margin-left: 0.5rem;
   }
 
   &__phone-title {
