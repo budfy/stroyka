@@ -30,7 +30,7 @@ module.exports = function style() {
       ],
     }))
     .pipe(clean({
-      level: 2
+      level: 1
     }))
     .pipe(concat('style.min.css'))
     .pipe(map.write('../sourcemaps/'))
